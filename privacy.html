@@ -20,6 +20,7 @@
         table { width: 100%; border-collapse: collapse; margin: 12px 0; }
         th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid #d2d2d7; color: #424245; font-size: 0.95rem; }
         th { font-weight: 600; color: #1d1d1f; }
+        code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; background: #ececf0; padding: 1px 5px; border-radius: 4px; }
         hr { border: none; border-top: 1px solid #d2d2d7; margin: 28px 0; }
         .back { display: inline-block; margin-bottom: 24px; font-weight: 500; }
         .footer { text-align: center; color: #6e6e73; font-size: 0.85rem; margin-top: 40px; }
@@ -30,9 +31,10 @@
         <a class="back" href="index.html">&larr; Back to Support</a>
 
         <h1>Privacy Policy</h1>
-        <p class="meta"><strong>PetPill</strong><br>Effective Date: March 18, 2026 &middot; Last Updated: March 18, 2026</p>
+        <p class="meta"><strong>PetPill</strong><br>Effective Date: August 5, 2026 &middot; Last Updated: August 10, 2026</p>
 
         <h2>1. Introduction</h2>
+        <p>This Privacy Policy applies to <strong>PetPill</strong> — the iOS app published by Anas Ben Mustafa, App Store ID 6760020801, bundle identifier <code>benmustafaa.pillpet</code>. PetPill is the name shown on your device and throughout the app; its App Store listing may appear under a longer descriptive title.</p>
         <p>This Privacy Policy describes how PetPill ("the App," "we," "us," or "our") collects, uses, stores, and shares information when you use our mobile application and related services, including our iOS widget and Apple Watch companion app (collectively, the "Services").</p>
         <p>By downloading, installing, or using the App, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with the practices described herein, please do not use the App.</p>
 
@@ -41,47 +43,92 @@
         <h2>2. Information We Collect</h2>
 
         <h3>2.1 Information You Provide Directly</h3>
-        <p>The App collects only the information you voluntarily enter to manage your pet's medication schedule:</p>
+        <p>The App collects only the information you voluntarily enter to manage your pet's care:</p>
         <ul>
-            <li><strong>Pet Information:</strong> Name, species, photo, and optional notes.</li>
-            <li><strong>Medication Information:</strong> Medication name, dosage amount and unit, medication type, frequency/schedule, start and end dates, and optional notes.</li>
-            <li><strong>Dose Logs:</strong> Timestamps of scheduled and administered doses, dose status (e.g., given, skipped, missed), and optional notes.</li>
+            <li><strong>Pet Information:</strong> Name, species, photo, optional date of birth, and optional notes.</li>
+            <li><strong>Medication Information:</strong> Medication name, dosage amount and unit, medication type, frequency/schedule, start and end dates, optional notes, and — if you enable inventory tracking — your recorded stock quantity and refill lead time.</li>
+            <li><strong>Dose Logs:</strong> Timestamps of scheduled and administered doses, dose status (e.g., given, skipped, missed), optional per-dose notes, and the optional caregiver name described in Section 2.4.</li>
+            <li><strong>Vet Appointments and Appointment Logs:</strong> Appointment type, date and recurrence, reminder timings, optional veterinarian name, optional clinic name and address, optional notes, and the completion status and timestamp of past appointments.</li>
+            <li><strong>Weight Entries:</strong> Recorded weight, date, and optional note.</li>
         </ul>
 
-        <h3>2.2 Information We Do NOT Collect</h3>
+        <h3>2.2 Clinic Locations</h3>
+        <p>When you add a clinic to an appointment, you may search for it by name or address. The search text you type is sent to <strong>Apple Maps (MapKit)</strong> to return matching places; if you select one, the App stores that place's name, address, and map coordinates alongside the appointment so it can be displayed on a map.</p>
+        <p>These coordinates describe <strong>the clinic you chose</strong>, not you. The App does not request location permission, does not use <code>CLLocationManager</code>, and never reads or records your device's position.</p>
+
+        <h3>2.3 Information We Do NOT Collect</h3>
         <p>We do not collect, request, or store any of the following:</p>
         <ul>
-            <li>Personal identification information (name, email address, phone number, or mailing address)</li>
+            <li>Your email address, phone number, mailing address, or date of birth</li>
             <li>Account credentials or passwords</li>
             <li>Device identifiers (IDFA, IDFV, or similar)</li>
-            <li>Location or geolocation data</li>
-            <li>Health data (the App does not integrate with Apple HealthKit)</li>
-            <li>Contacts, calendar, microphone, or camera data</li>
-            <li>Browsing history or usage analytics</li>
-            <li>Advertising identifiers</li>
+            <li>Your device's location or geolocation (see Section 2.2 for clinic locations)</li>
+            <li>Health data about people (the App does not integrate with Apple HealthKit; all health information in the App concerns your pets)</li>
+            <li>Contacts, microphone, or camera data</li>
+            <li>Reading access to your calendar (see Section 7 — the App can write events, never read them)</li>
+            <li>Browsing history</li>
+            <li>Advertising identifiers, and any form of cross-app or cross-site tracking</li>
         </ul>
+        <p>The App does collect <strong>anonymous</strong> usage and diagnostic data, including a recording of the initial setup screens, which is described in full in Section 2.6 and which you can switch off.</p>
 
-        <h3>2.3 Purchase Information</h3>
+        <h3>2.4 Caregiver Name (Optional)</h3>
+        <p>The App includes an optional <strong>"Your name"</strong> field in Settings. If you fill it in, the name you enter is:</p>
+        <ul>
+            <li>Stored on your device and synchronized to your other devices via Apple's iCloud Key-Value Store;</li>
+            <li>Attached to each dose you log, so a dose record can read "Given 8:12 · Anna";</li>
+            <li><strong>Visible to anyone you have shared a pet with</strong> through the family sharing feature described in Section 5.1, as part of those dose records.</li>
+        </ul>
+        <p>This field is <strong>entirely optional and blank by default</strong>. If you leave it blank, no name is stored and dose records carry no attribution. If you have shared a pet with others, entering a name here means disclosing it to those people — that is the purpose of the feature. Names already attached to logged doses are historical snapshots and are not changed or removed if you later edit or clear the field; to remove them, delete the dose records concerned.</p>
+        <p>If you are signed in to iCloud and use family sharing, Apple additionally makes participants' Apple ID names and email addresses visible to one another through its own sharing interface, as described in Section 5.1. That information is handled by Apple, not by us.</p>
+
+        <h3>2.5 Purchase Information</h3>
         <p>If you subscribe to PetPill Pro or purchase a lifetime license, the transaction is processed by Apple through the App Store. We use RevenueCat, Inc. ("RevenueCat") as a third-party service to verify your purchase entitlements. RevenueCat receives:</p>
         <ul>
             <li>An anonymous, randomly generated user identifier (not linked to your Apple ID or personal identity)</li>
             <li>Purchase receipt data (product identifiers, transaction status, subscription expiry)</li>
+            <li>The random per-installation analytics identifier described in Section 2.6, so that renewals and cancellations can be reported against the same anonymous user. This is sent only while <em>Share anonymous usage data</em> is switched on, and is cleared when you switch it off.</li>
         </ul>
         <p>RevenueCat does <strong>not</strong> receive your name, email address, Apple ID, or payment method details. For more information, see <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</p>
+
+        <h3>2.6 Anonymous Usage and Diagnostic Data</h3>
+        <p>To understand how the App is used and to find and fix crashes, we use <strong>PostHog</strong> as a third-party analytics and error-reporting service. PostHog receives:</p>
+        <ul>
+            <li><strong>App lifecycle events</strong> — that the App was installed, opened, sent to the background, or updated, with the time it happened and the App version</li>
+            <li><strong>Crash and error reports</strong> — the technical diagnostic information produced when the App stops unexpectedly, such as a stack trace, the device model, and the operating system version</li>
+            <li><strong>Which step of the initial setup flow you reached, and the shape of the answers you gave</strong> — for example that you chose "cat" rather than the animal's name, that you picked a weekly schedule at two reminders a day rather than what the medication is, whether you turned notifications on, and how many pets you said live at home</li>
+            <li><strong>What you did on the upgrade screen</strong> — that it was shown, which plan was highlighted, and whether a purchase was started, completed, cancelled or failed, together with the price and currency shown to you</li>
+            <li><strong>A screen recording of the initial setup flow only</strong> — see the separate heading below</li>
+        </ul>
+        <p>Alongside each event we send a small amount of context: whether the App is running a paid subscription, whether you have finished setup, and how many days ago the App was installed.</p>
+        <p>PostHog <strong>never</strong> receives:</p>
+        <ul>
+            <li>Anything about your pets — no names, species photographs, birthdates, or weights</li>
+            <li>The names of medications, your dosages, the doses you have logged, or your vet appointments</li>
+            <li>Any note or free text you have typed anywhere in the App</li>
+            <li>Your caregiver name (Section 2.4), your Apple ID, your iCloud account, or your email address</li>
+            <li>Your location</li>
+        </ul>
+        <p><strong>Anonymity, and its one limit.</strong> The App never asks you to identify yourself and never sends PostHog your name or email. Each installation is assigned a randomly generated identifier stored only in that copy of the App; it is not your device's advertising identifier (IDFA), vendor identifier (IDFV), or any other device or account identifier. Because the identifier is random and local, we cannot connect your activity across your own devices, and deleting the App destroys it permanently.</p>
+        <p>The one limit is this: if you buy a subscription, we pass that same random identifier to RevenueCat (Section 2.5) so that RevenueCat can report renewals and cancellations against it. The App is not running when a subscription renews or lapses, so this is the only way we can tell whether people who upgrade stay. It links your purchase record to your usage record; it does not link either of them to you, and neither service receives your name, email address or Apple ID. Turning the setting below off clears that link as well as stopping analytics.</p>
+        <p><strong>Screen recording during initial setup.</strong> The first time you set up the App, PostHog records the setup screens so we can see where people get stuck. This recording covers the setup flow only — it stops the moment setup finishes and never runs anywhere else in the App, so your pets, medications, dose history and notes are never recorded. Within the setup flow, every text field and every place your pet's name is shown back to you is blacked out before the recording leaves your device, as are all images. Recording does not happen at all if you have switched the setting below off.</p>
+        <p><strong>You can turn all of this off.</strong> Go to <strong>Settings → Privacy</strong> in the App and switch off <em>Share anonymous usage data</em>. No further events are sent, no recording is made, and the RevenueCat link described above is cleared. This setting is per-device.</p>
+        <p>Data is processed on PostHog's European Union infrastructure. For more information, see <a href="https://posthog.com/privacy">PostHog's Privacy Policy</a>.</p>
 
         <hr>
 
         <h2>3. How We Use Your Information</h2>
         <p>We use the information described in Section 2 solely to:</p>
         <ul>
-            <li>Display and manage your pet medication schedules within the App</li>
-            <li>Deliver local notifications to remind you of upcoming doses</li>
+            <li>Display and manage your pets' medication schedules, vet appointments, and weight records within the App</li>
+            <li>Deliver local notifications to remind you of upcoming doses, refills, appointments, birthdays, and weigh-ins</li>
             <li>Synchronize your data across your personal devices via Apple iCloud</li>
-            <li>Enable optional family sharing so household members can coordinate pet care</li>
+            <li>Enable optional family sharing so household members can coordinate pet care, including showing who logged a given dose</li>
             <li>Verify your subscription or purchase status to unlock premium features</li>
             <li>Display medication information in the App's widget and Apple Watch companion</li>
+            <li>Add an appointment to your calendar, and show a clinic on a map, when you explicitly ask for it</li>
+            <li>Measure, in aggregate and anonymously, how often the App is used, and find and fix crashes, using only the data described in Section 2.6</li>
         </ul>
-        <p>We do <strong>not</strong> use your information for advertising, marketing, profiling, or any purpose unrelated to the core functionality of the App.</p>
+        <p>We do <strong>not</strong> use your information for advertising, marketing, or automated decision-making, and we do not build a profile of you. The anonymous data in Section 2.6 is not linked to you or to any account, and is used only in aggregate.</p>
 
         <hr>
 
@@ -104,7 +151,7 @@
         <h3>5.1 Family Sharing (User-Initiated)</h3>
         <p>The App offers an optional family sharing feature that allows you to share a pet's medication data with other iCloud users you designate. When you initiate sharing:</p>
         <ul>
-            <li>The invited individual receives read and write access to the shared pet's records, including pet information, medications, and dose logs.</li>
+            <li>The invited individual receives read and write access to the shared pet's records, including pet information, medications, dose logs (with any caregiver names and per-dose notes attached to them — see Section 2.4), vet appointments and their logs, and weight entries.</li>
             <li>Sharing is facilitated through Apple's CloudKit sharing infrastructure. Participant information (name and email associated with the participant's Apple ID) is managed by Apple.</li>
             <li>You may revoke a participant's access at any time.</li>
         </ul>
@@ -113,9 +160,12 @@
         <h3>5.2 Third-Party Service Providers</h3>
         <table>
             <tr><th>Provider</th><th>Purpose</th><th>Data Received</th></tr>
-            <tr><td>Apple (iCloud/CloudKit)</td><td>Data synchronization</td><td>Pet, medication, and dose log data</td></tr>
+            <tr><td>Apple (iCloud/CloudKit)</td><td>Data synchronization</td><td>Pet, medication, dose log, appointment, and weight data</td></tr>
+            <tr><td>Apple (MapKit)</td><td>Clinic search</td><td>The clinic search text you type (Section 2.2)</td></tr>
+            <tr><td>Apple (EventKit)</td><td>Calendar export</td><td>Appointment details you choose to export (Section 7)</td></tr>
             <tr><td>Apple (App Store)</td><td>Payment processing</td><td>Payment and transaction details (managed entirely by Apple)</td></tr>
-            <tr><td>RevenueCat, Inc.</td><td>Purchase verification</td><td>Anonymous user ID, purchase receipts</td></tr>
+            <tr><td>RevenueCat, Inc.</td><td>Purchase verification</td><td>Anonymous user ID, purchase receipts, and (while analytics is on) the analytics ID from Section 2.6</td></tr>
+            <tr><td>PostHog, Inc.</td><td>Anonymous usage analytics, crash reporting, and a recording of the initial setup screens (Section 2.6)</td><td>App open/install/update events, setup-flow progress and upgrade-screen interactions as shapes and counts, crash diagnostics, a masked recording of the setup flow, a random per-installation ID. No pet, medication, appointment, health or account data.</td></tr>
         </table>
 
         <h3>5.3 No Sale of Data</h3>
@@ -132,13 +182,19 @@
 
         <hr>
 
-        <h2>7. Photos</h2>
+        <h2>7. Photos and Calendar</h2>
+
+        <h3>7.1 Photos</h3>
         <p>The App allows you to attach a photo to each pet profile using Apple's system photo picker (PhotosPicker). The App accesses <strong>only</strong> the specific photo you select — it does not access your full photo library. Selected photos are stored locally within the App's database and may be synchronized via iCloud as described in Section 4.2.</p>
+
+        <h3>7.2 Calendar</h3>
+        <p>From a vet appointment you may choose <strong>"Add to Calendar"</strong>. The App requests <strong>write-only</strong> calendar access and, with your permission, creates a single event containing the appointment's type, pet name, date, and any clinic name, address, veterinarian, and notes you entered.</p>
+        <p>Write-only access means the App <strong>cannot read your calendar</strong>: it cannot see your existing events, and it does not know whether the event it created was later changed or deleted. The export is one-way and happens once, at your request — subsequent edits in the App are not synchronized to the calendar event, and vice versa. You can decline or revoke this permission at any time in your device's Settings; every other feature continues to work without it.</p>
 
         <hr>
 
         <h2>8. Children's Privacy</h2>
-        <p>The App is not directed at children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children. Because the App does not collect personal identification information from any user, no age verification mechanism is implemented.</p>
+        <p>The App is not directed at children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children. Because the App collects no personal identification information from any user beyond the optional, blank-by-default caregiver name described in Section 2.4 — and holds no user accounts — no age verification mechanism is implemented.</p>
         <p>If you believe a child has provided personal information through the App, please contact us at the address in Section 13 so we can take appropriate action.</p>
 
         <hr>
@@ -146,7 +202,8 @@
         <h2>9. Data Retention and Deletion</h2>
 
         <h3>9.1 Retention</h3>
-        <p>Your data is retained on your device and in iCloud for as long as you use the App. We do not independently retain any copy of your data.</p>
+        <p>Your data is retained on your device and in iCloud for as long as you use the App. We do not independently retain any copy of the pet, medication, appointment or weight data you enter.</p>
+        <p>The anonymous usage and diagnostic data described in Section 2.6, including the setup-flow recording, is retained by PostHog under their standard retention periods. Because it contains no personal data and no identifier that can be traced back to you, it cannot be tied to you or individually deleted after the fact — switching the setting off stops any further data being sent, ends any recording, and clears the RevenueCat link described in Sections 2.5 and 2.6.</p>
 
         <h3>9.2 Deletion</h3>
         <p>You may delete your data at any time by:</p>
@@ -166,15 +223,16 @@
             <li><strong>Correction:</strong> You may edit any record within the App.</li>
             <li><strong>Deletion:</strong> You may delete any or all data as described in Section 9.2.</li>
             <li><strong>Portability:</strong> Your data is stored in your personal iCloud account and is accessible across your Apple devices.</li>
-            <li><strong>Objection/Restriction:</strong> Because we do not process data for marketing, profiling, or automated decision-making, these rights are not applicable.</li>
+            <li><strong>Objection/Restriction:</strong> We do not process data for marketing, profiling, or automated decision-making. You may object to the anonymous analytics described in Section 2.6 at any time by switching off <em>Share anonymous usage data</em> in <strong>Settings → Privacy</strong>.</li>
         </ul>
-        <p>For residents of the European Economic Area (EEA), United Kingdom, or jurisdictions with similar data protection laws: the legal basis for processing your data is the performance of a contract (providing the App's functionality to you) and your explicit consent (for iCloud synchronization and notifications).</p>
+        <p>For residents of the European Economic Area (EEA), United Kingdom, or jurisdictions with similar data protection laws: the legal basis for processing your data is the performance of a contract (providing the App's functionality to you) and your explicit consent (for iCloud synchronization and notifications). The anonymous usage and diagnostic data described in Section 2.6 is processed on the basis of our legitimate interest in maintaining and improving the App; it contains no personal data about you, and you may switch it off at any time as described above.</p>
         <p>For residents of California (USA): under the California Consumer Privacy Act (CCPA), you have the right to know what personal information is collected, to request deletion, and to opt out of the sale of personal information. As stated in Section 5.3, we do not sell personal information.</p>
 
         <hr>
 
         <h2>11. International Data Transfers</h2>
-        <p>If you use iCloud, your data may be transferred to and stored on servers located outside your country of residence, in accordance with Apple's data processing practices. We do not independently transfer data across borders. Please refer to Apple's Privacy Policy for details on their international data handling.</p>
+        <p>If you use iCloud, your data may be transferred to and stored on servers located outside your country of residence, in accordance with Apple's data processing practices. Please refer to Apple's Privacy Policy for details on their international data handling.</p>
+        <p>The anonymous usage and diagnostic data described in Section 2.6 is processed on PostHog's European Union infrastructure.</p>
 
         <hr>
 
@@ -193,12 +251,15 @@
         <h2>14. Summary of Key Points</h2>
         <table>
             <tr><th>Question</th><th>Answer</th></tr>
-            <tr><td>Do we collect personal information?</td><td>No. Only pet and medication data you enter.</td></tr>
-            <tr><td>Do we use analytics or tracking?</td><td>No.</td></tr>
+            <tr><td>Do we collect personal information?</td><td>Almost none. The App stores the pet, medication, appointment and weight data you enter. The only optional field about <em>you</em> is the "Your name" caregiver field (Section 2.4), which is blank by default.</td></tr>
+            <tr><td>Do we track your location?</td><td>No. The App never reads your device's position. Clinic coordinates describe a place you searched for (Section 2.2).</td></tr>
+            <tr><td>Can we read your calendar?</td><td>No. The App has write-only access, used solely to add an appointment you export (Section 7.2).</td></tr>
+            <tr><td>Do we use analytics or tracking?</td><td>Anonymous analytics only: that the App was opened, how far you got through initial setup, what you did on the upgrade screen, crash reports, and a masked recording of the setup screens alone. Never your pets, medications, appointments or notes, and never linked to your name or email. You can switch it all off in Settings → Privacy. We do no cross-app tracking and use no advertising identifiers.</td></tr>
+            <tr><td>Do you record my screen?</td><td>Only the initial setup flow, once, with all text fields and pet names blacked out — never anywhere else in the App. Off entirely if you switch analytics off (Section 2.6).</td></tr>
             <tr><td>Do we show ads?</td><td>No.</td></tr>
             <tr><td>Do we sell your data?</td><td>No.</td></tr>
-            <tr><td>Where is data stored?</td><td>On your device and in your personal iCloud account.</td></tr>
-            <tr><td>Who can see your data?</td><td>Only you, and anyone you explicitly invite via family sharing.</td></tr>
+            <tr><td>Where is data stored?</td><td>On your device and in your personal iCloud account. The anonymous analytics in Section 2.6 is the one exception, and is processed in the EU.</td></tr>
+            <tr><td>Who can see your data?</td><td>Only you, and anyone you explicitly invite via family sharing — who also see any caregiver name attached to dose records.</td></tr>
             <tr><td>Can you delete your data?</td><td>Yes, at any time, from within the App or via iCloud settings.</td></tr>
         </table>
 
