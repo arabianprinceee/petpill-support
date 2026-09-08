@@ -31,7 +31,7 @@
         <a class="back" href="index.html">&larr; Back to Support</a>
 
         <h1>Privacy Policy</h1>
-        <p class="meta"><strong>PetPill</strong><br>Effective Date: August 5, 2026 &middot; Last Updated: August 11, 2026</p>
+        <p class="meta"><strong>PetPill</strong><br>Effective Date: August 5, 2026 &middot; Last Updated: September 7, 2026</p>
 
         <h2>1. Introduction</h2>
         <p>This Privacy Policy applies to <strong>PetPill</strong> — the iOS app published by Anas Ben Mustafa, App Store ID 6760020801, bundle identifier <code>benmustafaa.pillpet</code>. PetPill is the name shown on your device and throughout the app; its App Store listing may appear under a longer descriptive title.</p>
@@ -47,7 +47,8 @@
         <ul>
             <li><strong>Pet Information:</strong> Name, species, photo, optional date of birth, and optional notes.</li>
             <li><strong>Medication Information:</strong> Medication name, dosage amount and unit, medication type, frequency/schedule, start and end dates, optional notes, and — if you enable inventory tracking — your recorded stock quantity and refill lead time.</li>
-            <li><strong>Dose Logs:</strong> Timestamps of scheduled and administered doses, dose status (e.g., given, skipped, missed), optional per-dose notes, and the optional caregiver name described in Section 2.4.</li>
+            <li><strong>Dose Logs:</strong> Timestamps of scheduled and administered doses, dose status (e.g., given, skipped, missed), optional per-dose notes, and the optional caregiver name and account identifier described in Section 2.4.</li>
+            <li><strong>Caregiver Profile (optional):</strong> Your caregiver name and a photo of yourself, described in Section 2.4.</li>
             <li><strong>Vet Appointments and Appointment Logs:</strong> Appointment type, date and recurrence, reminder timings, optional veterinarian name, optional clinic name and address, optional notes, and the completion status and timestamp of past appointments.</li>
             <li><strong>Weight Entries:</strong> Recorded weight, date, and optional note.</li>
         </ul>
@@ -71,15 +72,17 @@
         </ul>
         <p>The App does collect <strong>anonymous</strong> usage and diagnostic data, including a recording of the initial setup screens, which is described in full in Section 2.6 and which you can switch off.</p>
 
-        <h3>2.4 Caregiver Name (Optional)</h3>
-        <p>The App includes an optional <strong>"Your name"</strong> field in Settings. If you fill it in, the name you enter is:</p>
+        <h3>2.4 Caregiver Name and Photo (Optional)</h3>
+        <p>The App includes an optional <strong>"Your name"</strong> field and an optional <strong>photo of yourself</strong>, both on the Household tab. If you fill them in:</p>
         <ul>
-            <li>Stored on your device and synchronized to your other devices via Apple's iCloud Key-Value Store;</li>
-            <li>Attached to each dose you log, so a dose record can read "Given 8:12 · Anna";</li>
-            <li><strong>Visible to anyone you have shared a pet with</strong> through the family sharing feature described in Section 5.1, as part of those dose records.</li>
+            <li>The name is stored on your device and synchronized to your other devices via Apple's iCloud Key-Value Store, and attached to each dose, vet visit and toilet visit you log, so a record can read "Given 8:12 · Anna";</li>
+            <li>The photo is reduced to a small thumbnail (at most 192 pixels on its longer side) before it is stored — the original is never kept — and synchronized to your other devices the same way;</li>
+            <li>Alongside both, the App stores an opaque identifier for your iCloud account (your CloudKit user record name — a random-looking string that is not your name, email or Apple ID). It is stamped on each record you log and is what lets another person's device match a record to your photo;</li>
+            <li>Your name, photo and that identifier are written into the iCloud data of <strong>every pet you can see</strong> — including pets other people have shared with you — so that everyone in that pet's household sees your face and name beside what you logged. This is the only channel through which a photo can reach another person's device, and it means a copy of your photo is stored in the pet owner's iCloud account, not only your own;</li>
+            <li><strong>All of it is visible to anyone you share a pet with</strong>, or who has shared a pet with you, through the household sharing feature described in Section 5.1.</li>
         </ul>
-        <p>This field is <strong>entirely optional and blank by default</strong>. If you leave it blank, no name is stored and dose records carry no attribution. If you have shared a pet with others, entering a name here means disclosing it to those people — that is the purpose of the feature. Names already attached to logged doses are historical snapshots and are not changed or removed if you later edit or clear the field; to remove them, delete the dose records concerned.</p>
-        <p>If you are signed in to iCloud and use family sharing, Apple additionally makes participants' Apple ID names and email addresses visible to one another through its own sharing interface, as described in Section 5.1. That information is handled by Apple, not by us.</p>
+        <p>Both are <strong>entirely optional and blank by default</strong>. If you leave them blank, no name, photo or identifier is stored and records carry no attribution. Entering a name or photo means disclosing it to the people you share pets with — that is the purpose of the feature. Names and identifiers already attached to logged records are historical snapshots and are not changed or removed if you later edit or clear the fields; to remove them, delete the records concerned. Removing your photo removes it from every pet you can still see; a copy may remain in the iCloud data of a pet you have since left or been removed from, because the App can no longer reach that data.</p>
+        <p>If you are signed in to iCloud and use household sharing, Apple additionally makes participants' Apple ID names and email addresses visible to one another through its own sharing interface, as described in Section 5.1. That information is handled by Apple, not by us.</p>
 
         <h3>2.5 Purchase Information</h3>
         <p>If you subscribe to PetPill Pro or purchase a lifetime license, the transaction is processed by Apple through the App Store. We use RevenueCat, Inc. ("RevenueCat") as a third-party service to verify your purchase entitlements. RevenueCat receives:</p>
@@ -156,7 +159,7 @@
         <h3>5.1 Family Sharing (User-Initiated)</h3>
         <p>The App offers an optional family sharing feature that allows you to share a pet's medication data with other iCloud users you designate. When you initiate sharing:</p>
         <ul>
-            <li>The invited individual receives read and write access to the shared pet's records, including pet information, medications, dose logs (with any caregiver names and per-dose notes attached to them — see Section 2.4), vet appointments and their logs, and weight entries.</li>
+            <li>The invited individual receives read and write access to the shared pet's records, including pet information, medications, dose logs (with any caregiver names, account identifiers and per-dose notes attached to them — see Section 2.4), vet appointments and their logs, weight entries, the toilet log, and the caregiver profiles (name and photo, Section 2.4) of everyone in that pet's household.</li>
             <li>Sharing is facilitated through Apple's CloudKit sharing infrastructure. Participant information (name and email associated with the participant's Apple ID) is managed by Apple.</li>
             <li>You may revoke a participant's access at any time.</li>
         </ul>
@@ -190,7 +193,7 @@
         <h2>7. Photos and Calendar</h2>
 
         <h3>7.1 Photos</h3>
-        <p>The App allows you to attach a photo to each pet profile using Apple's system photo picker (PhotosPicker). The App accesses <strong>only</strong> the specific photo you select — it does not access your full photo library. Selected photos are stored locally within the App's database and may be synchronized via iCloud as described in Section 4.2.</p>
+        <p>The App allows you to attach a photo to each pet profile, and optionally a photo of yourself for your household (Section 2.4), using Apple's system photo picker (PhotosPicker). The App accesses <strong>only</strong> the specific photo you select — it does not access your full photo library. Selected photos are stored locally within the App's database and may be synchronized via iCloud as described in Section 4.2.</p>
 
         <h3>7.2 Calendar</h3>
         <p>From a vet appointment you may choose <strong>"Add to Calendar"</strong>. The App requests <strong>write-only</strong> calendar access and, with your permission, creates a single event containing the appointment's type, pet name, date, and any clinic name, address, veterinarian, and notes you entered.</p>
@@ -199,7 +202,7 @@
         <hr>
 
         <h2>8. Children's Privacy</h2>
-        <p>The App is not directed at children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children. Because the App collects no personal identification information from any user beyond the optional, blank-by-default caregiver name described in Section 2.4 — and holds no user accounts — no age verification mechanism is implemented.</p>
+        <p>The App is not directed at children under the age of 13 (or the applicable age of digital consent in your jurisdiction). We do not knowingly collect personal information from children. Because the App collects no personal identification information from any user beyond the optional, blank-by-default caregiver name and photo described in Section 2.4 — and holds no user accounts — no age verification mechanism is implemented.</p>
         <p>If you believe a child has provided personal information through the App, please contact us at the address in Section 13 so we can take appropriate action.</p>
 
         <hr>
@@ -256,7 +259,7 @@
         <h2>14. Summary of Key Points</h2>
         <table>
             <tr><th>Question</th><th>Answer</th></tr>
-            <tr><td>Do we collect personal information?</td><td>Almost none. The App stores the pet, medication, appointment and weight data you enter. The only optional field about <em>you</em> is the "Your name" caregiver field (Section 2.4), which is blank by default.</td></tr>
+            <tr><td>Do we collect personal information?</td><td>Almost none. The App stores the pet, medication, appointment and weight data you enter. The only optional information about <em>you</em> is the caregiver name and photo (Section 2.4), both blank by default.</td></tr>
             <tr><td>Do we track your location?</td><td>No. The App never reads your device's position. Clinic coordinates describe a place you searched for (Section 2.2).</td></tr>
             <tr><td>Can we read your calendar?</td><td>No. The App has write-only access, used solely to add an appointment you export (Section 7.2).</td></tr>
             <tr><td>Do we use analytics or tracking?</td><td>Anonymous analytics only: that the App was opened, how far you got through initial setup, what you did on the upgrade screen, the shape of what you track (that a pet is a cat, that a dose was logged on time), crash reports, and a masked recording of the setup screens alone. Never the name of a pet, medication, vet or clinic, never a note, photograph, weight or dosage, and never linked to your name or email. You can switch it all off in Settings → Privacy. We do no cross-app tracking and use no advertising identifiers.</td></tr>
@@ -264,7 +267,7 @@
             <tr><td>Do we show ads?</td><td>No.</td></tr>
             <tr><td>Do we sell your data?</td><td>No.</td></tr>
             <tr><td>Where is data stored?</td><td>On your device and in your personal iCloud account. The anonymous analytics in Section 2.6 is the one exception, and is processed in the EU.</td></tr>
-            <tr><td>Who can see your data?</td><td>Only you, and anyone you explicitly invite via family sharing — who also see any caregiver name attached to dose records.</td></tr>
+            <tr><td>Who can see your data?</td><td>Only you, and anyone you explicitly invite via family sharing — who also see any caregiver name and photo you have set.</td></tr>
             <tr><td>Can you delete your data?</td><td>Yes, at any time, from within the App or via iCloud settings.</td></tr>
         </table>
 
