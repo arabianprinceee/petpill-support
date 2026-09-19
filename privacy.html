@@ -53,6 +53,7 @@
             <li><strong>Vet Appointments and Appointment Logs:</strong> Appointment type, date and recurrence, reminder timings, optional veterinarian name, optional clinic name and address, optional notes, and the completion status and timestamp of past appointments.</li>
             <li><strong>Weight Entries:</strong> Recorded weight, date, optional note, and the optional caregiver name and account identifier described in Section 2.4.</li>
             <li><strong>Toilet Log:</strong> For each recorded visit, whether it was urine, stool or both, the date and time, an optional note, and the optional caregiver name and account identifier described in Section 2.4.</li>
+            <li><strong>Tracked Vitals (optional):</strong> If you switch a vital on for a pet, each reading you record &mdash; the measurement itself (for example a resting breathing rate in breaths per minute), the date and time, how long the count ran if you counted it in the App, an optional note, and the optional caregiver name and account identifier described in Section 2.4 &mdash; together with the threshold you set for that pet, how long a count should aim for, the time of the optional nightly reminder, and the start of the baseline period. Thresholds are numbers <strong>you</strong> enter, typically the one your veterinarian gave you; the App does not supply clinical reference ranges and does not interpret, diagnose or advise on anything you record.</li>
         </ul>
 
         <h3>2.2 Clinic Locations</h3>
@@ -107,6 +108,7 @@
             <li><strong>The shape of the pets, medications and vet appointments you set up</strong> — for example that a pet is a cat, that a medication is a liquid measured in millilitres taken twice a day for fourteen days, that a vet appointment is a vaccination three weeks away that repeats every six months, and how many pets you have. We do <strong>not</strong> receive names, dosage amounts, birthdates, weights, or the clinic and vet you use — only, in some cases, <em>whether</em> you filled a field in at all.</li>
             <li><strong>That you used a feature</strong> — that a weigh-in was recorded (never the weight itself), that medication stock was refilled, that a pet was shared with someone or a share was accepted or left, and that the history screen was opened and how many filters were applied</li>
             <li><strong>That you recorded a toilet visit for a pet, and its shape</strong> &mdash; whether it was a pee, a poo or both, how many entries that pet now has, and which screen you recorded it from. We receive <strong>only whether</strong> you attached a note or a caregiver name, never either of them</li>
+            <li><strong>That you recorded a reading of a tracked vital, and its shape</strong> &mdash; which vital it was (for example a breathing rate), whether you counted it in the App or typed it, which screen you recorded it from, how many readings that pet now has, how many seconds the count ran and how many it was aiming for, and <strong>whether</strong> it was above the threshold you set. We do <strong>not</strong> receive the reading itself, or the threshold. We also receive that you switched a vital on or off, that you reset a baseline, and that you turned its reminder on or off.</li>
             <li><strong>When the App failed you</strong> — that reminder coverage ran out, whether notifications and Background App Refresh are permitted on your device, and whether the rating card was shown and how you answered it</li>
             <li><strong>A screen recording of the initial setup flow only</strong> — see the separate heading below</li>
         </ul>
@@ -116,7 +118,7 @@
             <li><strong>The name of anything</strong> — your pets, their medications, your vet, or their clinic</li>
             <li><strong>Any note or free text you have typed anywhere in the App</strong>, including the observations you attach to an individual dose. We receive only whether a note exists, never a word of it.</li>
             <li><strong>Photographs of your pets</strong>, or any image from your device</li>
-            <li><strong>The values you record about an animal's health</strong> — no weights, no dosage amounts, no birthdates. Where these appear above it is as a count, a unit, or a yes/no.</li>
+            <li><strong>The values you record about an animal's health</strong> — no weights, no dosage amounts, no birthdates, and no readings of a tracked vital or the threshold you set for it. Where these appear above it is as a count, a unit, or a yes/no.</li>
             <li>Your caregiver name (Section 2.4), your Apple ID, your iCloud account, or your email address</li>
             <li><strong>Your location</strong> — neither your device's location nor the address of any clinic you have saved</li>
         </ul>
@@ -163,7 +165,7 @@
         <h3>5.1 Family Sharing (User-Initiated)</h3>
         <p>The App offers an optional family sharing feature that allows you to share a pet's medication data with other iCloud users you designate. When you initiate sharing:</p>
         <ul>
-            <li>The invited individual receives read and write access to the shared pet's records, including pet information (which includes any microchip details you recorded), medications, dose logs (with any caregiver names, account identifiers and per-dose notes attached to them — see Section 2.4), vet appointments and their logs, weight entries, the toilet log, and the caregiver profiles (name and photo, Section 2.4) of everyone in that pet's household.</li>
+            <li>The invited individual receives read and write access to the shared pet's records, including pet information (which includes any microchip details you recorded), medications, dose logs (with any caregiver names, account identifiers and per-dose notes attached to them — see Section 2.4), vet appointments and their logs, weight entries, the toilet log, any tracked vitals and their readings, and the caregiver profiles (name and photo, Section 2.4) of everyone in that pet's household.</li>
             <li>Sharing is facilitated through Apple's CloudKit sharing infrastructure. Participant information (name and email associated with the participant's Apple ID) is managed by Apple.</li>
             <li>You may revoke a participant's access at any time.</li>
         </ul>
