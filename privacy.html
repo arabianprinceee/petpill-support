@@ -31,7 +31,7 @@
         <a class="back" href="index.html">&larr; Back to Support</a>
 
         <h1>Privacy Policy</h1>
-        <p class="meta"><strong>PetPill</strong><br>Effective Date: August 5, 2026 &middot; Last Updated: September 16, 2026</p>
+        <p class="meta"><strong>PetPill</strong><br>Effective Date: August 5, 2026 &middot; Last Updated: September 24, 2026</p>
 
         <h2>1. Introduction</h2>
         <p>This Privacy Policy applies to <strong>PetPill</strong> — the iOS app published by Anas Ben Mustafa, App Store ID 6760020801, bundle identifier <code>benmustafaa.pillpet</code>. PetPill is the name shown on your device and throughout the app; its App Store listing may appear under a longer descriptive title.</p>
@@ -53,6 +53,7 @@
             <li><strong>Vet Appointments and Appointment Logs:</strong> Appointment type, date and recurrence, reminder timings, optional veterinarian name, optional clinic name and address, optional notes, and the completion status and timestamp of past appointments.</li>
             <li><strong>Weight Entries:</strong> Recorded weight, date, optional note, and the optional caregiver name and account identifier described in Section 2.4.</li>
             <li><strong>Toilet Log:</strong> For each recorded visit, whether it was urine, stool or both, the date and time, an optional note, and the optional caregiver name and account identifier described in Section 2.4.</li>
+            <li><strong>Meals (optional):</strong> If you set up a pet's meals: the food and portion you enter, how many meals a day and at what times, any name you give a meal, whether each meal sends a reminder, and any dates you pause meals for. For each meal that is answered: whether the pet was fed or deliberately not fed, when the meal was due and when it was fed, how much of it the pet ate if you say (all, some or none), an optional note, and the optional caregiver name and account identifier described in Section 2.4. The pet also carries the date until which a PetPill Pro subscription in its household covers its meal reminders (Section 2.5).</li>
         </ul>
 
         <h3>2.2 Clinic Locations</h3>
@@ -94,6 +95,7 @@
             <li>The random per-installation analytics identifier described in Section 2.6, so that renewals and cancellations can be reported against the same anonymous user. This is sent only while <em>Share anonymous usage data</em> is switched on, and is cleared when you switch it off.</li>
         </ul>
         <p>RevenueCat does <strong>not</strong> receive your name, email address, Apple ID, or payment method details. For more information, see <a href="https://www.revenuecat.com/privacy/">RevenueCat's Privacy Policy</a>.</p>
+        <p><strong>Meal reminders in a shared household.</strong> Meal reminders are a Pro feature that covers everyone looking after a pet, so a subscriber's device stores on each pet with meals the date its subscription currently runs until. It travels with the pet through iCloud like the rest of the pet's record, which means the people you share that pet with (Section 5.1) could in principle read that date. It is only a date: it carries no product, price, transaction, or any detail of your account, and the App does not display it to anyone.</p>
 
         <h3>2.6 Anonymous Usage and Diagnostic Data</h3>
         <p>To understand how the App is used and to find and fix crashes, we use <strong>PostHog</strong> as a third-party analytics and error-reporting service. PostHog receives:</p>
@@ -107,6 +109,7 @@
             <li><strong>The shape of the pets, medications and vet appointments you set up</strong> — for example that a pet is a cat, that a medication is a liquid measured in millilitres taken twice a day for fourteen days, that a vet appointment is a vaccination three weeks away that repeats every six months, and how many pets you have. We do <strong>not</strong> receive names, dosage amounts, birthdates, weights, or the clinic and vet you use — only, in some cases, <em>whether</em> you filled a field in at all.</li>
             <li><strong>That you used a feature</strong> — that a weigh-in was recorded (never the weight itself), that medication stock was refilled, that a pet was shared with someone or a share was accepted or left, and that the history screen was opened and how many filters were applied</li>
             <li><strong>That you recorded a toilet visit for a pet, and its shape</strong> &mdash; whether it was a pee, a poo or both, how many entries that pet now has, and which screen you recorded it from. We receive <strong>only whether</strong> you attached a note or a caregiver name, never either of them</li>
+            <li><strong>That you set up or answered a meal, and its shape</strong> &mdash; how many meals a day a pet has and how many of them send a reminder, <strong>whether</strong> a food, a portion or a meal name was entered (never what it is), that a meal was marked fed or not fed and where from (the App, a reminder, the Lock Screen or a widget), whether it was answered within half an hour of its time, how much the pet ate (all, some or none) if you said, that meals were paused and for how many days, that a meal reminder was snoozed, and whether the one-time card suggesting meal reminders was shown and how you answered it. We do <strong>not</strong> receive the food, the portion, a meal's name, or any note.</li>
             <li><strong>When the App failed you</strong> — that reminder coverage ran out, whether notifications and Background App Refresh are permitted on your device, and whether the rating card was shown and how you answered it</li>
             <li><strong>A screen recording of the initial setup flow only</strong> — see the separate heading below</li>
         </ul>
@@ -132,7 +135,7 @@
         <p>We use the information described in Section 2 solely to:</p>
         <ul>
             <li>Display and manage your pets' medication schedules, vet appointments, and weight records within the App</li>
-            <li>Deliver local notifications to remind you of upcoming doses, refills, appointments, birthdays, and weigh-ins</li>
+            <li>Deliver local notifications to remind you of upcoming doses, refills, appointments, birthdays, weigh-ins, and meals</li>
             <li>Synchronize your data across your personal devices via Apple iCloud</li>
             <li>Enable optional family sharing so household members can coordinate pet care, including showing who logged a given dose</li>
             <li>Verify your subscription or purchase status to unlock premium features</li>
@@ -154,16 +157,16 @@
         <p>The App does <strong>not</strong> operate its own servers. We do not have direct access to your iCloud data. Your data is governed by <a href="https://www.apple.com/legal/internet-services/icloud/">Apple's iCloud Terms and Conditions</a> and <a href="https://www.apple.com/privacy/">Apple's Privacy Policy</a>.</p>
 
         <h3>4.3 App Group Shared Storage</h3>
-        <p>The App shares a limited data container with its widget extension and Apple Watch companion to enable dose display and logging from these surfaces. This data remains on your device and within Apple's sandboxed environment.</p>
+        <p>The App shares a limited data container with its widget extension and Apple Watch companion to enable dose display and logging from these surfaces. This data remains on your device and within Apple's sandboxed environment. The same applies to meals: the widget shows and records them from this container, and the card the App can show on your Lock Screen before a meal (a Live Activity) is created and updated on your device, with no server involved.</p>
 
         <hr>
 
         <h2>5. Data Sharing and Disclosure</h2>
 
         <h3>5.1 Family Sharing (User-Initiated)</h3>
-        <p>The App offers an optional family sharing feature that allows you to share a pet's medication data with other iCloud users you designate. When you initiate sharing:</p>
+        <p>The App offers an optional family sharing feature that allows you to share a pet's care records with other iCloud users you designate. When you initiate sharing:</p>
         <ul>
-            <li>The invited individual receives read and write access to the shared pet's records, including pet information (which includes any microchip details you recorded), medications, dose logs (with any caregiver names, account identifiers and per-dose notes attached to them — see Section 2.4), vet appointments and their logs, weight entries, the toilet log, and the caregiver profiles (name and photo, Section 2.4) of everyone in that pet's household.</li>
+            <li>The invited individual receives read and write access to the shared pet's records, including pet information (which includes any microchip details you recorded), medications, dose logs (with any caregiver names, account identifiers and per-dose notes attached to them — see Section 2.4), vet appointments and their logs, weight entries, the toilet log, the pet's meal times and meal records (with any appetite answers, notes and caregiver names attached to them), and the caregiver profiles (name and photo, Section 2.4) of everyone in that pet's household.</li>
             <li>Sharing is facilitated through Apple's CloudKit sharing infrastructure. Participant information (name and email associated with the participant's Apple ID) is managed by Apple.</li>
             <li>You may revoke a participant's access at any time.</li>
         </ul>
@@ -172,7 +175,7 @@
         <h3>5.2 Third-Party Service Providers</h3>
         <table>
             <tr><th>Provider</th><th>Purpose</th><th>Data Received</th></tr>
-            <tr><td>Apple (iCloud/CloudKit)</td><td>Data synchronization</td><td>Pet, medication, dose log, appointment, and weight data</td></tr>
+            <tr><td>Apple (iCloud/CloudKit)</td><td>Data synchronization</td><td>Pet, medication, dose log, appointment, weight, and meal data</td></tr>
             <tr><td>Apple (MapKit)</td><td>Clinic search</td><td>The clinic search text you type (Section 2.2)</td></tr>
             <tr><td>Apple (EventKit)</td><td>Calendar export</td><td>Appointment details you choose to export (Section 7)</td></tr>
             <tr><td>Apple (App Store)</td><td>Payment processing</td><td>Payment and transaction details (managed entirely by Apple)</td></tr>
@@ -189,7 +192,7 @@
         <hr>
 
         <h2>6. Notifications</h2>
-        <p>The App requests your permission to send local notifications for medication dose reminders. These notifications are generated and delivered entirely on your device. No notification data is transmitted to our servers or any third party.</p>
+        <p>The App requests your permission to send local notifications for care reminders &mdash; medication doses, vet appointments, meals and the other reminders you switch on. These notifications are generated and delivered entirely on your device. On devices that support it, the App can instead show an upcoming meal on your Lock Screen as a Live Activity, which is also created and updated on your device. No notification data is transmitted to our servers or any third party.</p>
         <p>You may disable notifications at any time through your device's Settings.</p>
 
         <hr>
@@ -214,7 +217,7 @@
         <h2>9. Data Retention and Deletion</h2>
 
         <h3>9.1 Retention</h3>
-        <p>Your data is retained on your device and in iCloud for as long as you use the App. We do not independently retain any copy of the pet, medication, appointment or weight data you enter.</p>
+        <p>Your data is retained on your device and in iCloud for as long as you use the App. We do not independently retain any copy of the pet, medication, appointment, weight or meal data you enter.</p>
         <p>The anonymous usage and diagnostic data described in Section 2.6, including the setup-flow recording, is retained by PostHog under their standard retention periods. Because it contains no personal data and no identifier that can be traced back to you, it cannot be tied to you or individually deleted after the fact — switching the setting off stops any further data being sent, ends any recording, and clears the RevenueCat link described in Sections 2.5 and 2.6.</p>
 
         <h3>9.2 Deletion</h3>
@@ -263,7 +266,7 @@
         <h2>14. Summary of Key Points</h2>
         <table>
             <tr><th>Question</th><th>Answer</th></tr>
-            <tr><td>Do we collect personal information?</td><td>Almost none. The App stores the pet, medication, appointment, weight and toilet-log data you enter, including any microchip details you record &mdash; all of it on your device and in your own iCloud, never on our servers. The only optional information about <em>you</em> is the caregiver name and photo (Section 2.4), both blank by default.</td></tr>
+            <tr><td>Do we collect personal information?</td><td>Almost none. The App stores the pet, medication, appointment, weight, toilet-log and meal data you enter, including any microchip details you record &mdash; all of it on your device and in your own iCloud, never on our servers. The only optional information about <em>you</em> is the caregiver name and photo (Section 2.4), both blank by default.</td></tr>
             <tr><td>Do we track your location?</td><td>No. The App never reads your device's position. Clinic coordinates describe a place you searched for (Section 2.2).</td></tr>
             <tr><td>Can we read your calendar?</td><td>No. The App has write-only access, used solely to add an appointment you export (Section 7.2).</td></tr>
             <tr><td>Do we use analytics or tracking?</td><td>Anonymous analytics only: that the App was opened, how far you got through initial setup, what you did on the upgrade screen, the shape of what you track (that a pet is a cat, that a dose was logged on time), crash reports, and a masked recording of the setup screens alone. Never the name of a pet, medication, vet or clinic, never a note, photograph, weight or dosage, and never linked to your name or email. You can switch it all off in Settings → Privacy. We do no cross-app tracking and use no advertising identifiers.</td></tr>
