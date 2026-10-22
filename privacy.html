@@ -139,8 +139,8 @@
         <ul>
             <li><strong>The page you opened</strong> and the page that linked to it, including any campaign tag in that link</li>
             <li><strong>Your browser, operating system and device type</strong>, your screen size and your language</li>
-            <li><strong>Your approximate location</strong> (country, region and city), worked out from your IP address. The IP address itself is not stored.</li>
-            <li><strong>That you tapped a "Download on the App Store" button</strong>, and on which page</li>
+            <li><strong>Your time zone</strong>, as your browser reports it. PostHog does not work out where you are from your IP address, and does not store it.</li>
+            <li><strong>That you tapped a "Download on the App Store" button</strong>, which one, and on which page</li>
         </ul>
         <p>To tell one visitor from another without a cookie, PostHog derives a temporary identifier from your IP address and browser details combined with a secret that changes every day, so it cannot recognise you on another day or on another website. Website visits are kept apart from the App's analytics (Section 2.6) and are never linked to them or to you. The website shows no advertising and does no cross-site tracking.</p>
         <p>The website is hosted by <strong>GitHub Pages</strong>. Like any web host, GitHub receives your IP address and the details of each request in order to serve the page; see the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
@@ -196,7 +196,7 @@
             <tr><td>Apple (EventKit)</td><td>Calendar export</td><td>Appointment details you choose to export (Section 7)</td></tr>
             <tr><td>Apple (App Store)</td><td>Payment processing</td><td>Payment and transaction details (managed entirely by Apple)</td></tr>
             <tr><td>RevenueCat, Inc.</td><td>Purchase verification</td><td>Anonymous user ID, purchase receipts, and (while analytics is on) the analytics ID from Section 2.6</td></tr>
-            <tr><td>PostHog, Inc.</td><td>Counting visits to the PetPill website (Section 2.7)</td><td>The page viewed and the page before it, browser and device type, screen size, language, approximate location, and taps on the App Store button. No cookies, and no stored IP address.</td></tr>
+            <tr><td>PostHog, Inc.</td><td>Counting visits to the PetPill website (Section 2.7)</td><td>The page viewed and the page before it, browser and device type, screen size, language, time zone, and taps on the App Store button. No cookies, and no stored IP address.</td></tr>
             <tr><td>GitHub, Inc.</td><td>Hosting the PetPill website (Section 2.7)</td><td>Your IP address and the details of each page request</td></tr>
             <tr><td>PostHog, Inc.</td><td>Anonymous usage analytics, crash reporting, and a recording of the initial setup screens (Section 2.6)</td><td>App open/install/update events, crash diagnostics, a masked recording of the setup flow, a random per-installation ID, and the <em>shape</em> of what you do in the App — setup-flow progress, upgrade-screen interactions, whether a limited-time discount was offered to you, that a dose was logged, a pet or medication added, a vet appointment recorded, or a chore done, and which in-app hints were shown and followed, expressed as types, counts and yes/no. No names, notes, photographs, weights, dosage amounts, or account data.</td></tr>
         </table>
@@ -288,7 +288,7 @@
             <tr><td>Do we track your location?</td><td>No. The App never reads your device's position. Clinic coordinates describe a place you searched for (Section 2.2).</td></tr>
             <tr><td>Can we read your calendar?</td><td>No. The App has write-only access, used solely to add an appointment you export (Section 7.2).</td></tr>
             <tr><td>Do we use analytics or tracking?</td><td>Anonymous analytics only: that the App was opened, how far you got through initial setup, what you did on the upgrade screen, the shape of what you track (that a pet is a cat, that a dose was logged on time), crash reports, and a masked recording of the setup screens alone. Never the name of a pet, medication, vet or clinic, never a note, photograph, weight or dosage, and never linked to your name or email. You can switch it all off in Settings → Privacy. We do no cross-app tracking and use no advertising identifiers.</td></tr>
-            <tr><td>Does the website track me?</td><td>It counts visits without cookies and without storing anything on your device: the page, your browser and device type, an approximate location, and taps on the App Store button. Your IP address is not stored, and visits are never linked to the App or to you (Section 2.7).</td></tr>
+            <tr><td>Does the website track me?</td><td>It counts visits without cookies and without storing anything on your device: the page, your browser and device type, your time zone, and taps on the App Store button. Your IP address is not stored, and visits are never linked to the App or to you (Section 2.7).</td></tr>
             <tr><td>Do you record my screen?</td><td>Only the initial setup flow, once, with all text fields and pet names blacked out — never anywhere else in the App. Off entirely if you switch analytics off (Section 2.6).</td></tr>
             <tr><td>Do we show ads?</td><td>No.</td></tr>
             <tr><td>Do we sell your data?</td><td>No.</td></tr>
