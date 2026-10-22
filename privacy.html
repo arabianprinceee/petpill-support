@@ -31,11 +31,11 @@
         <a class="back" href="index.html">&larr; Back to Support</a>
 
         <h1>Privacy Policy</h1>
-        <p class="meta"><strong>PetPill</strong><br>Effective Date: August 5, 2026 &middot; Last Updated: October 13, 2026</p>
+        <p class="meta"><strong>PetPill</strong><br>Effective Date: August 5, 2026 &middot; Last Updated: October 22, 2026</p>
 
         <h2>1. Introduction</h2>
         <p>This Privacy Policy applies to <strong>PetPill</strong> — the iOS app published by Anas Ben Mustafa, App Store ID 6760020801, bundle identifier <code>benmustafaa.pillpet</code>. PetPill is the name shown on your device and throughout the app; its App Store listing may appear under a longer descriptive title.</p>
-        <p>This Privacy Policy describes how PetPill ("the App," "we," "us," or "our") collects, uses, stores, and shares information when you use our mobile application and related services, including our iOS widget and Apple Watch companion app (collectively, the "Services").</p>
+        <p>This Privacy Policy describes how PetPill ("the App," "we," "us," or "our") collects, uses, stores, and shares information when you use our mobile application and related services, including our iOS widget, Apple Watch companion app and the PetPill website (collectively, the "Services").</p>
         <p>By downloading, installing, or using the App, you acknowledge that you have read and understood this Privacy Policy. If you do not agree with the practices described herein, please do not use the App.</p>
 
         <hr>
@@ -134,6 +134,17 @@
         <p><strong>You can turn all of this off.</strong> Go to <strong>Settings → Privacy</strong> in the App and switch off <em>Share anonymous usage data</em>. No further events are sent, no recording is made, and the RevenueCat link described above is cleared. This setting is per-device.</p>
         <p>Data is processed on PostHog's European Union infrastructure. For more information, see <a href="https://posthog.com/privacy">PostHog's Privacy Policy</a>.</p>
 
+        <h3>2.7 The PetPill Website</h3>
+        <p>The PetPill website, at arabianprinceee.github.io/petpill, counts its visits with <strong>PostHog</strong>, without cookies and without storing anything on your device (no cookies, no local storage, no session storage). When you open a page, PostHog receives:</p>
+        <ul>
+            <li><strong>The page you opened</strong> and the page that linked to it, including any campaign tag in that link</li>
+            <li><strong>Your browser, operating system and device type</strong>, your screen size and your language</li>
+            <li><strong>Your time zone</strong>, as your browser reports it. PostHog does not work out where you are from your IP address, and does not store it.</li>
+            <li><strong>That you tapped a "Download on the App Store" button</strong>, which one, and on which page</li>
+        </ul>
+        <p>To tell one visitor from another without a cookie, PostHog derives a temporary identifier from your IP address and browser details combined with a secret that changes every day, so it cannot recognise you on another day or on another website. Website visits are kept apart from the App's analytics (Section 2.6) and are never linked to them or to you. The website shows no advertising and does no cross-site tracking.</p>
+        <p>The website is hosted by <strong>GitHub Pages</strong>. Like any web host, GitHub receives your IP address and the details of each request in order to serve the page; see the <a href="https://docs.github.com/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+
         <hr>
 
         <h2>3. How We Use Your Information</h2>
@@ -185,6 +196,8 @@
             <tr><td>Apple (EventKit)</td><td>Calendar export</td><td>Appointment details you choose to export (Section 7)</td></tr>
             <tr><td>Apple (App Store)</td><td>Payment processing</td><td>Payment and transaction details (managed entirely by Apple)</td></tr>
             <tr><td>RevenueCat, Inc.</td><td>Purchase verification</td><td>Anonymous user ID, purchase receipts, and (while analytics is on) the analytics ID from Section 2.6</td></tr>
+            <tr><td>PostHog, Inc.</td><td>Counting visits to the PetPill website (Section 2.7)</td><td>The page viewed and the page before it, browser and device type, screen size, language, time zone, and taps on the App Store button. No cookies, and no stored IP address.</td></tr>
+            <tr><td>GitHub, Inc.</td><td>Hosting the PetPill website (Section 2.7)</td><td>Your IP address and the details of each page request</td></tr>
             <tr><td>PostHog, Inc.</td><td>Anonymous usage analytics, crash reporting, and a recording of the initial setup screens (Section 2.6)</td><td>App open/install/update events, crash diagnostics, a masked recording of the setup flow, a random per-installation ID, and the <em>shape</em> of what you do in the App — setup-flow progress, upgrade-screen interactions, whether a limited-time discount was offered to you, that a dose was logged, a pet or medication added, a vet appointment recorded, or a chore done, and which in-app hints were shown and followed, expressed as types, counts and yes/no. No names, notes, photographs, weights, dosage amounts, or account data.</td></tr>
         </table>
 
@@ -252,7 +265,7 @@
 
         <h2>11. International Data Transfers</h2>
         <p>If you use iCloud, your data may be transferred to and stored on servers located outside your country of residence, in accordance with Apple's data processing practices. Please refer to Apple's Privacy Policy for details on their international data handling.</p>
-        <p>The anonymous usage and diagnostic data described in Section 2.6 is processed on PostHog's European Union infrastructure.</p>
+        <p>The anonymous usage and diagnostic data described in Section 2.6, and the website visit counts described in Section 2.7, are processed on PostHog's European Union infrastructure.</p>
 
         <hr>
 
@@ -275,10 +288,11 @@
             <tr><td>Do we track your location?</td><td>No. The App never reads your device's position. Clinic coordinates describe a place you searched for (Section 2.2).</td></tr>
             <tr><td>Can we read your calendar?</td><td>No. The App has write-only access, used solely to add an appointment you export (Section 7.2).</td></tr>
             <tr><td>Do we use analytics or tracking?</td><td>Anonymous analytics only: that the App was opened, how far you got through initial setup, what you did on the upgrade screen, the shape of what you track (that a pet is a cat, that a dose was logged on time), crash reports, and a masked recording of the setup screens alone. Never the name of a pet, medication, vet or clinic, never a note, photograph, weight or dosage, and never linked to your name or email. You can switch it all off in Settings → Privacy. We do no cross-app tracking and use no advertising identifiers.</td></tr>
+            <tr><td>Does the website track me?</td><td>It counts visits without cookies and without storing anything on your device: the page, your browser and device type, your time zone, and taps on the App Store button. Your IP address is not stored, and visits are never linked to the App or to you (Section 2.7).</td></tr>
             <tr><td>Do you record my screen?</td><td>Only the initial setup flow, once, with all text fields and pet names blacked out — never anywhere else in the App. Off entirely if you switch analytics off (Section 2.6).</td></tr>
             <tr><td>Do we show ads?</td><td>No.</td></tr>
             <tr><td>Do we sell your data?</td><td>No.</td></tr>
-            <tr><td>Where is data stored?</td><td>On your device and in your personal iCloud account. The anonymous analytics in Section 2.6 is the one exception, and is processed in the EU.</td></tr>
+            <tr><td>Where is data stored?</td><td>On your device and in your personal iCloud account. The anonymous analytics in Section 2.6 and the website visit counts in Section 2.7 are the exceptions, and are processed in the EU.</td></tr>
             <tr><td>Who can see your data?</td><td>Only you, and anyone you explicitly invite via family sharing — who also see any caregiver name and photo you have set.</td></tr>
             <tr><td>Can you delete your data?</td><td>Yes, at any time, from within the App or via iCloud settings.</td></tr>
         </table>
